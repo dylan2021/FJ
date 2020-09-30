@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--边框-->
+    <item android:top="@dimen/dm020" android:bottom="@dimen/dm020">
+        <shape >
+            <solid android:color="@color/divider_color_dark" />
+
+        </shape>
+    </item>
+    <item android:right="@dimen/dm001" >
+        <shape>
+            <solid android:color="@color/white"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ngame="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dm015"
+        android:layout_marginTop="@dimen/dm030">
+
+        <TextView
+            android:id="@+id/time_tag_tv"
+            style="@style/px24_212121"
+            android:layout_width="wrap_content"
+            android:paddingLeft="@dimen/dm010"
+            android:paddingRight="@dimen/dm015"
+            android:layout_height="@dimen/dm050"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_f5_right_left_round"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/to_checke_tv"
+            style="@style/px24_white"
+            android:layout_width="@dimen/dm090"
+            android:layout_height="@dimen/dm045"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/main_margin_left_x"
+            android:background="@drawable/shape_30px_main_color_dark"
+            android:drawablePadding="@dimen/dm015"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="复核" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/report_name_tv"
+        style="@style/px26_212121"
+        android:lineSpacingExtra="@dimen/dm010"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:layout_marginRight="@dimen/main_margin_left_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:drawablePadding="@dimen/dm015" />
+
+    <TextView
+        android:id="@+id/remark_tv"
+        style="@style/px26_a5a5a5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/dm005"
+        android:drawablePadding="@dimen/dm015"
+        android:paddingLeft="@dimen/main_margin_left_x"
+        android:paddingRight="@dimen/main_margin_left_x" />
+
+    <!--文件-->
+    <com.android.baihuahu.view.ScrollListView
+        android:id="@+id/horizontal_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:layout_marginRight="@dimen/main_margin_left_x"
+        android:background="@color/f5"
+        android:clipToPadding="false"
+        android:divider="@color/white"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:listSelector="@color/transparent"
+        android:overScrollMode="never"
+        android:scrollbars="none"></com.android.baihuahu.view.ScrollListView>
+    <!--复核-->
+    <TextView
+        android:id="@+id/checked_title_tv"
+        style="@style/px26_212121"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dm015"
+        android:paddingTop="@dimen/dm015"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:lineSpacingExtra="@dimen/dm010"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:paddingRight="@dimen/main_margin_left_x" />
+
+    <TextView
+        android:id="@+id/checked_remark_tv"
+        style="@style/px26_a5a5a5"
+        android:layout_marginTop="@dimen/dm005"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/main_margin_left_x"
+        android:paddingBottom="@dimen/main_margin_left_x"
+        android:paddingRight="@dimen/main_margin_left_x" />
+</LinearLayout>

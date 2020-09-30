@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/px28_212121_bold"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dm030"
+        android:text="确认产值" />
+
+    <include layout="@layout/layout_line_1px_d9d9d9"></include>
+    <!--android:background="@drawable/shape_simple_dialog_white"-->
+    <EditText
+        android:id="@+id/audit_num_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_line_divider_bottom"
+        android:hint="请填写确认的产值金额"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:inputType="numberDecimal"
+        android:maxLength="10"
+        android:padding="@dimen/main_margin_left_x"
+        android:singleLine="true"
+        android:textColorHint="@color/ccc"
+        android:textCursorDrawable="@drawable/shape_cursor_color_main_color"
+        android:textSize="@dimen/dm026" />
+
+    <EditText
+        android:id="@+id/audit_remark_et"
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_line_divider_bottom"
+        android:layout_height="wrap_content"
+        android:hint="备注"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:padding="@dimen/main_margin_left_x"
+        android:textColorHint="@color/ccc"
+        android:textCursorDrawable="@drawable/shape_cursor_color_main_color"
+        android:textSize="@dimen/dm026" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel_bt"
+            style="@style/px26_mainColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="@dimen/main_margin_left_x"
+            android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/commit_bt"
+            style="@style/px26_mainColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="@dimen/main_margin_left_x"
+            android:text="@string/sure"
+           />
+    </LinearLayout>
+
+</LinearLayout>

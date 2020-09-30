@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/px28_212121_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dm030"
+        android:text="复核" />
+
+    <include layout="@layout/layout_line_1px_d9d9d9"></include>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm060"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+       >
+
+        <RadioButton
+            android:id="@+id/danger_rb_1"
+            style="@style/seletor_rb_big"
+            android:layout_marginLeft="@dimen/main_margin_left_x"
+            android:checked="true"
+            android:text="已整改" />
+
+        <RadioButton
+            android:layout_marginLeft="@dimen/main_margin_left_x"
+            style="@style/seletor_rb_big"
+            android:text="未整改" />
+    </RadioGroup>
+
+
+    <!--备注-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/build_content_tv"
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_height"
+            android:layout_marginLeft="@dimen/main_margin_left_x"
+            android:gravity="center_vertical"
+            android:text="备注" />
+
+        <EditText
+            android:id="@+id/remark_tv"
+            style="@style/px26_212121"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/build_content_tv"
+            android:background="@null"
+            android:focusableInTouchMode="true"
+            android:gravity="top"
+            android:hint="@string/input_hint"
+            android:minHeight="@dimen/dm080"
+            android:paddingBottom="@dimen/main_margin_left_x"
+            android:paddingLeft="@dimen/main_margin_left_x"
+            android:paddingRight="@dimen/main_margin_left_x"
+            android:text=""
+            android:textColorHint="@color/color_hint"
+            android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel_bt"
+            style="@style/px26_mainColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="@dimen/main_margin_left_x"
+            android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/commit_bt"
+            style="@style/px26_mainColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="@dimen/main_margin_left_x"
+            android:text="@string/sure" />
+    </LinearLayout>
+
+</LinearLayout>

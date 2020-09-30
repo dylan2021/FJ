@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tabs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_left_center" />
+
+    <include layout="@layout/layout_line_1px_divider" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/activity_title_layout"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/line_height"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_margin_left_x"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/main_margin_left_x"
+                android:paddingTop="@dimen/dm015">
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="清单编号: " />
+
+                <TextView
+                    android:id="@+id/category_tv"
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:paddingTop="@dimen/dm007"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_margin_left_x"
+                android:layout_marginRight="@dimen/main_margin_left_x"
+                android:paddingTop="@dimen/dm010">
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="计划开工日期: " />
+
+                <TextView
+                    android:id="@+id/start_date_tv"
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_margin_left_x"
+                android:layout_marginRight="@dimen/main_margin_left_x"
+                android:paddingTop="@dimen/dm010">
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="计划完工日期: " />
+
+
+                <TextView
+                    android:id="@+id/end_date_tv"
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_margin_left_x"
+                android:layout_marginRight="@dimen/main_margin_left_x"
+                android:paddingTop="@dimen/dm010">
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="总工期(天): " />
+
+
+                <TextView
+                    android:id="@+id/operator_phone_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_margin_left_x"
+                android:layout_marginRight="@dimen/main_margin_left_x"
+                android:paddingTop="@dimen/dm010">
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="计划产值(万元): " />
+
+
+                <TextView
+                    android:id="@+id/operator_certificate_no_tv"
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_margin_left_x"
+                android:layout_marginRight="@dimen/main_margin_left_x"
+                android:paddingBottom="@dimen/main_margin_left_x"
+                android:paddingTop="@dimen/dm010">
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="完成进度: " />
+
+                <TextView
+                    android:id="@+id/operator_identity_no_tv"
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="" />
+            </LinearLayout>
+
+            <include layout="@layout/layout_line_height_f5" />
+
+            <ListView
+                android:id="@+id/process_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:descendantFocusability="beforeDescendants"
+                android:divider="@color/divider_color"
+                android:dividerHeight="@dimen/dm000"
+                android:listSelector="@drawable/selector_item_bg"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/audit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:background="@drawable/shape_line_divider_dark_top"
+        android:paddingTop="@dimen/dm001">
+
+        <Button
+            android:id="@+id/audit_bt_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="进度汇报"
+            android:textColor="@color/mainColor"
+            android:textSize="@dimen/dm028" />
+    </RelativeLayout>
+</LinearLayout>

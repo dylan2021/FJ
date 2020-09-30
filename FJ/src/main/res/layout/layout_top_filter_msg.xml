@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:descendantFocusability="afterDescendants"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dm030"
+        android:layout_marginRight="@dimen/dm030"
+        android:layout_marginTop="@dimen/dm080"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/px28_212121_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/main_margin_left_x"
+            android:text="日期筛选：" />
+
+        <TextView
+            android:id="@+id/filter_time_bt_0"
+            android:layout_width="@dimen/dm150"
+            android:layout_height="@dimen/me_filter_rb_height"
+            android:layout_marginLeft="@dimen/dm020"
+            android:background="@drawable/selector_rb_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:hint="开始日期"
+            android:textColor="@color/color_seletor_main_color_21"
+            android:textColorHint="@color/a5a5a5"
+            android:textSize="@dimen/dm028" />
+
+        <View
+            android:layout_width="@dimen/dm030"
+            android:layout_height="@dimen/dm001"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dm015"
+            android:layout_marginRight="@dimen/dm015"
+            android:background="@color/eee"/>
+
+        <TextView
+            android:id="@+id/filter_time_bt_1"
+            android:layout_width="@dimen/dm150"
+            android:layout_height="@dimen/me_filter_rb_height"
+            android:background="@drawable/selector_rb_bg"
+            android:button="@null"
+            android:clickable="true"
+            android:gravity="center"
+            android:hint="结束日期"
+            android:textColor="@color/color_seletor_main_color_21"
+            android:textColorHint="@color/a5a5a5"
+            android:textSize="@dimen/dm028" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm080"
+        android:layout_marginTop="@dimen/dm050"
+        android:background="@drawable/shape_line_divider_dark_top"
+        android:paddingTop="@dimen/dm001">
+
+        <TextView
+            android:id="@+id/filter_cancel_bt"
+            style="@style/px26_white"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_main_color"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/close" />
+
+        <TextView
+            android:id="@+id/filter_ok_bt"
+            style="@style/px26_white"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dm001"
+            android:layout_weight="1"
+            android:background="@drawable/selector_main_color"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/sure" />
+    </LinearLayout>
+
+
+</LinearLayout>

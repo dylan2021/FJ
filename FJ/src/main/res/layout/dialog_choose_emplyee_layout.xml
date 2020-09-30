@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dm050">
+
+    <Button
+        android:id="@+id/dialog_btn_cancel"
+        style="@style/px26_999"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/app_title_height"
+        android:background="@null"
+        android:paddingLeft="@dimen/dm030"
+        android:paddingRight="@dimen/dm030"
+        android:text="@string/cancel" />
+
+    <TextView
+        style="@style/titlesize_212121"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/app_title_height"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dm005"
+        android:text="选择人员" />
+
+    <TextView
+        android:id="@+id/emplyee_seleted_save_bt"
+        style="@style/px26_mainColor"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/app_title_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dm040"
+        android:paddingRight="@dimen/dm030"
+        android:text="@string/finished" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm001"
+        android:layout_below="@id/dialog_btn_cancel"
+        android:background="@color/divider_color"></View>
+
+    <com.android.baihuahu.view.PullScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dialog_btn_cancel"
+        android:layout_marginTop="@dimen/dm001"
+        android:background="@color/f5"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:id="@+id/emplyee_seleted_items_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dm050"
+            android:background="@color/white"
+            android:orientation="vertical" />
+    </com.android.baihuahu.view.PullScrollView>
+
+</RelativeLayout>

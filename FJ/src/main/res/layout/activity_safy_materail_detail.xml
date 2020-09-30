@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tabs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_left_center" />
+
+    <include layout="@layout/layout_line_1px_divider" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/activity_title_layout"
+        android:layout_weight="1"
+        android:background="@color/f5">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/line_height"
+            android:background="@color/white"
+            android:orientation="vertical"
+          >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_margin_left_x"
+                android:layout_marginRight="@dimen/main_margin_left_x"
+                android:paddingTop="@dimen/main_margin_left_x">
+
+                <TextView
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="@dimen/item_key_width_4"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="入库数量" />
+
+
+                <TextView
+                    android:id="@+id/enter_num_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="@dimen/item_key_width_4"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1" />
+
+                <TextView
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="@dimen/item_key_width_4"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="入库时间" />
+
+                <TextView
+                    android:id="@+id/enter_time_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="@dimen/item_key_width_4"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_margin_left_x"
+                android:layout_marginRight="@dimen/main_margin_left_x"
+                android:paddingTop="@dimen/dm010">
+
+                <TextView
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="@dimen/item_key_width_4"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="领用数量" />
+
+
+                <TextView
+                    android:id="@+id/get_used_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="@dimen/item_key_width_4"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1" />
+
+                <TextView
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="@dimen/item_key_width_4"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="剩余数量" />
+
+                <TextView
+                    android:id="@+id/remain_num_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="@dimen/item_key_width_4"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_margin_left_x"
+                android:layout_marginRight="@dimen/main_margin_left_x"
+                android:paddingTop="@dimen/dm010">
+
+                <TextView
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="@dimen/item_key_width_4"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="厂&#8195;&#8195;商" />
+
+                <TextView
+                    android:id="@+id/supplier_name_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/main_margin_left_x"
+                android:layout_marginRight="@dimen/main_margin_left_x"
+                android:paddingBottom="@dimen/main_margin_left_x"
+                android:paddingTop="@dimen/dm010">
+
+                <TextView
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="@dimen/item_key_width_4"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="保&#8194;管&#8194;员" />
+
+
+                <TextView
+                    android:id="@+id/custodian_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="" />
+            </LinearLayout>
+
+            <include layout="@layout/layout_line_height_f5" />
+
+            <ListView
+                android:id="@+id/process_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:descendantFocusability="beforeDescendants"
+                android:divider="@color/divider_color"
+                android:dividerHeight="@dimen/dm001"
+                android:listSelector="@drawable/selector_item_bg"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/audit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:background="@drawable/shape_line_divider_dark_top"
+        android:paddingTop="@dimen/dm001">
+
+        <Button
+            android:id="@+id/take_away_bt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="领用"
+            android:textColor="@color/mainColor"
+            android:textSize="@dimen/dm028" />
+    </RelativeLayout>
+</LinearLayout>

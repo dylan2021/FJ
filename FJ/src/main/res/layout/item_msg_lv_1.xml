@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:brlabel="http://schemas.android.com/apk/res-auto"
+    android:background="@color/f5"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dm010"
+        android:layout_marginLeft="@dimen/dm020"
+        android:layout_marginRight="@dimen/dm020"
+        android:layout_marginTop="@dimen/dm010"
+        android:background="@drawable/shape_white_20px"
+        android:padding="@dimen/dm025">
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/msg_item_title_tv"
+            style="@style/px28_212121_bold"
+            android:layout_width="wrap_content"
+            android:maxWidth="@dimen/dm440"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dm010"
+            android:ellipsize="end"
+            android:singleLine="true" />
+
+
+        <com.android.baihuahu.view.BorderLabelTextView
+            android:id="@+id/status_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/px24_999"
+            android:layout_toRightOf="@+id/msg_item_title_tv"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dm011"
+            android:paddingRight="@dimen/dm011"
+            android:includeFontPadding="false"
+            android:paddingTop="@dimen/dm005"
+            android:paddingBottom="@dimen/dm005"
+           /><!--    brlabel:strokeColor="@color/white"-->
+
+        <TextView
+            android:id="@+id/msg_item_time_tv"
+            style="@style/px22_999"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/msg_item_title_tv"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/msg_item_tv_1"
+            style="@style/px26_666"
+            android:ellipsize="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/msg_item_time_tv"
+            android:layout_marginTop="@dimen/dm020"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/msg_item_tv_2"
+            style="@style/px26_666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/msg_item_tv_1"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingTop="@dimen/dm010"
+            android:text=""
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/msg_item_tv_3"
+            style="@style/px26_666"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/msg_item_tv_2"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dm010"
+            android:text=""
+            android:visibility="gone" />
+
+
+        <!--红点-->
+        <TextView
+            android:id="@+id/red_tag"
+            android:layout_width="@dimen/dm014"
+            android:layout_height="@dimen/dm014"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dm018"
+            android:background="@drawable/shape_circle_red"
+            android:textSize="@dimen/dm016" />
+    </RelativeLayout>
+</RelativeLayout>

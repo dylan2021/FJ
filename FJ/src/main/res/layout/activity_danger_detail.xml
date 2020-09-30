@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tabs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f5"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/activity_title_layout"
+        layout="@layout/layout_title_left_center" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_title_layout"
+        android:layout_marginTop="@dimen/line_height"
+        android:background="@color/white"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/check_content_title_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginLeft="@dimen/main_margin_left_x"
+                    android:gravity="center_vertical"
+                    android:text="隐患描述" />
+
+                <TextView
+                    android:id="@+id/check_content_et"
+                    style="@style/px26_212121"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/check_content_title_tv"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:focusableInTouchMode="true"
+                    android:gravity="top"
+                    android:hint="@string/input_hint"
+                    android:minHeight="@dimen/dm180"
+                    android:paddingLeft="@dimen/main_margin_left_x"
+                    android:paddingRight="@dimen/main_margin_left_x"
+                    android:paddingBottom="@dimen/main_margin_left_x"
+                    android:text=""
+                    android:textColorHint="@color/color_hint"
+                    android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+            </RelativeLayout>
+
+            <include layout="@layout/layout_line_1px_divider" />
+
+            <RelativeLayout
+                android:id="@+id/start_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/shape_line_divider_bottom">
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/main_margin_left_x"
+                    android:text="限期整改日期" />
+
+                <TextView
+                    android:id="@+id/date_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="@dimen/item_et_max_width"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:maxLines="1"
+                    android:paddingRight="@dimen/next_padding_right"
+                    android:textColorHint="@color/color_hint" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/shape_line_divider_bottom"
+                android:clickable="true">
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/main_margin_left_x"
+                    android:text="签收人" />
+
+                <TextView
+                    android:id="@+id/singer_name_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="@dimen/dm470"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:maxLines="1"
+                    android:paddingRight="@dimen/next_padding_right"
+                    android:text=""
+                    android:textColorHint="@color/color_hint" />
+
+            </RelativeLayout>
+            <!--附件-->
+            <include layout="@layout/layout_file_see_layout" />
+
+            <include layout="@layout/layout_line_height_f5" />
+
+            <ListView
+                android:id="@+id/process_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:descendantFocusability="beforeDescendants"
+                android:divider="@color/divider_color"
+                android:dividerHeight="@dimen/dm001"
+                android:listSelector="@drawable/selector_item_bg"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_bt_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dm025"
+        android:layout_marginTop="@dimen/dm015"
+        android:layout_marginRight="@dimen/dm025"
+        android:layout_marginBottom="@dimen/dm015"
+        android:background="@drawable/selector_login_bt"
+        android:onClick="onRectifyClick"
+        android:text="新增反馈"
+        android:textColor="@color/white"
+        android:textSize="@dimen/main_margin_left_x" />
+</RelativeLayout>

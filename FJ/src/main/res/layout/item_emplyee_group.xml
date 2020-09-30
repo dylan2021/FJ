@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dm020"
+    android:paddingBottom="@dimen/dm020"
+    android:paddingLeft="@dimen/main_margin_left_x"
+    android:paddingRight="@dimen/main_margin_left_x"
+    >
+
+    <TextView
+        android:id="@+id/name_tv"
+        style="@style/px28_212121"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dm008"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/real_in_num_tv"
+        style="@style/px24_999"
+        android:layout_width="wrap_content"
+        android:includeFontPadding="false"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/dm010"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawableRight="@drawable/ic_next"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/total_wage_tv"
+        style="@style/px26_a5a5a5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_tv"
+        android:paddingTop="@dimen/dm010"
+        android:text="" />
+
+</RelativeLayout>

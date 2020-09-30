@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tabs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/activity_title_layout"
+        layout="@layout/layout_title_left_center" />
+
+    <include layout="@layout/layout_line_height_f5" />
+
+    <com.android.baihuahu.view.PullScrollView
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/start_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/shape_line_divider_bottom">
+
+                <include layout="@layout/layout_must_input_pic" />
+
+                <TextView
+                    android:id="@+id/start_time_title_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/main_margin_left_x"
+                    android:text="日期" />
+
+                <TextView
+                    android:id="@+id/date_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="@dimen/item_et_max_width"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:drawableRight="@drawable/ic_next"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:hint="请选择"
+                    android:maxLines="1"
+                    android:paddingRight="@dimen/next_padding_right"
+                    android:textColorHint="@color/color_hint" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/end_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/shape_line_divider_bottom">
+
+                <include layout="@layout/layout_must_input_pic" />
+
+                <TextView
+                    android:id="@+id/end_time_title_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/main_margin_left_x"
+                    android:text="班组" />
+
+                <TextView
+                    android:id="@+id/work_end_time_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:drawableRight="@drawable/ic_next"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:hint="请选择"
+                    android:maxLines="1"
+                    android:paddingRight="@dimen/next_padding_right"
+                    android:textColorHint="@color/color_hint" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/shape_line_divider_bottom"
+                android:clickable="true">
+
+                <include layout="@layout/layout_must_input_pic" />
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/main_margin_left_x"
+                    android:text="选择人员" />
+
+                <TextView
+                    android:id="@+id/people_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="@dimen/dm470"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:drawableRight="@drawable/ic_next"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:hint="请选择"
+                    android:maxLines="2"
+                    android:paddingRight="@dimen/next_padding_right"
+                    android:textColorHint="@color/color_hint" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/layout_line_1px_divider" />
+
+            <RelativeLayout
+                android:id="@+id/hours_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm063"
+                android:background="@color/f5">
+
+                <TextView
+                    android:id="@+id/work_item_add_title_tv"
+                    style="@style/px22_a5a5a5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dm020"
+                    android:text="计时、计件明细 " />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hours_add_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/shape_line_divider_bottom">
+
+                <include layout="@layout/layout_must_input_pic" />
+
+                <TextView
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/main_margin_left_x"
+                    android:text="计时(小时)" />
+
+                <EditText
+                    android:id="@+id/hours_in_hours_sum_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="@dimen/dm400"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:hint="@string/input_hint"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:paddingRight="@dimen/main_margin_left_x"
+                    android:singleLine="true"
+                    android:textColorHint="@color/color_hint"
+                    android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/shape_line_divider_bottom">
+
+                <include layout="@layout/layout_must_input_pic" />
+
+                <TextView
+                    android:id="@+id/hours_in_numbers_title_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/main_margin_left_x"
+                    android:text="计件" />
+
+                <EditText
+                    android:id="@+id/hours_in_numbers_sum_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="@dimen/dm400"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:hint="@string/input_hint"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8"
+                    android:paddingRight="@dimen/main_margin_left_x"
+                    android:singleLine="true"
+                    android:textColorHint="@color/color_hint"
+                    android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/layout_line_height_f5" />
+            <!--备注-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/build_content_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginLeft="@dimen/main_margin_left_x"
+                    android:gravity="center_vertical"
+                    android:text="备注" />
+
+                <EditText
+                    android:id="@+id/remark_tv"
+                    style="@style/px26_212121"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/build_content_tv"
+                    android:background="@null"
+                    android:focusableInTouchMode="true"
+                    android:gravity="top"
+                    android:hint="@string/input_hint"
+                    android:minHeight="@dimen/dm100"
+                    android:paddingBottom="@dimen/main_margin_left_x"
+                    android:paddingLeft="@dimen/main_margin_left_x"
+                    android:paddingRight="@dimen/main_margin_left_x"
+                    android:text=""
+                    android:textColorHint="@color/color_hint"
+                    android:textCursorDrawable="@drawable/shape_cursor_color_main_color" />
+            </RelativeLayout>
+
+            <include layout="@layout/layout_line_1px_divider" />
+        </LinearLayout>
+    </com.android.baihuahu.view.PullScrollView>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_bt_height"
+        android:layout_marginBottom="@dimen/dm015"
+        android:layout_marginLeft="@dimen/dm025"
+        android:layout_marginRight="@dimen/dm025"
+        android:layout_marginTop="@dimen/dm015"
+        android:background="@drawable/selector_login_bt"
+        android:onClick="onCommitClick"
+        android:text="@string/commit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/main_margin_left_x" />
+
+</LinearLayout>

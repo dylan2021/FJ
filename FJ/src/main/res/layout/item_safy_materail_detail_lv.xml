@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ngame="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dm015"
+        android:layout_marginTop="@dimen/dm025">
+
+
+        <TextView
+            android:id="@+id/time_tag_tv"
+            style="@style/px24_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dm050"
+            android:paddingLeft="@dimen/dm010"
+            android:paddingRight="@dimen/dm015"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_f5_right_left_round"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/get_used_num_tv"
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dm050"
+            android:layout_centerVertical="true"
+           android:layout_toRightOf="@id/time_tag_tv"
+            android:layout_marginLeft="@dimen/dm050"
+            android:gravity="center"
+            android:text="" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/get_and_used_name_tv"
+        style="@style/px26_212121"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:layout_marginRight="@dimen/main_margin_left_x"
+        android:drawablePadding="@dimen/dm015" />
+
+    <TextView
+        android:id="@+id/remark_tv"
+        style="@style/px26_a5a5a5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/dm010"
+        android:drawablePadding="@dimen/dm015"
+        android:paddingBottom="@dimen/dm025"
+        android:paddingLeft="@dimen/main_margin_left_x"
+        android:paddingRight="@dimen/main_margin_left_x" />
+
+</LinearLayout>

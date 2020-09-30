@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dm020">
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/dm020"
+        android:layout_marginRight="@dimen/dm020"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_0px"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dm020"
+        android:paddingLeft="@dimen/dm030"
+        android:paddingRight="@dimen/dm025"
+        android:paddingTop="@dimen/dm030">
+
+        <ImageView
+            android:id="@+id/main_item_iv"
+            android:layout_width="@dimen/dm030"
+            android:layout_height="@dimen/dm030"
+            android:src="@drawable/ic_main_item_icon" />
+
+        <TextView
+            android:id="@+id/main_item_name_tv"
+            style="@style/px26_212121"
+            android:layout_width="@dimen/dm380"
+            android:layout_height="@dimen/dm030"
+            android:layout_marginLeft="@dimen/dm010"
+            android:layout_toRightOf="@+id/main_item_iv"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/main_item_time_tv"
+            style="@style/px22_a5a5a5"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dm030"
+            android:layout_alignParentRight="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/main_item_desc_tv"
+            style="@style/px22_a5a5a5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_item_iv"
+            android:layout_marginTop="@dimen/dm015"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/dm005"
+            android:maxLines="2"
+            android:text="" />
+
+    </RelativeLayout>
+</LinearLayout>

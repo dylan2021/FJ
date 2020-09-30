@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/main_margin_left_x">
+
+        <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pic_sdv"
+            android:layout_width="@dimen/dm180"
+            android:layout_height="@dimen/dm180"
+            android:layout_marginRight="@dimen/dm020"
+            android:scaleType="centerCrop"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:failureImage="@color/eee"
+            fresco:placeholderImage="@color/eee"
+            fresco:placeholderImageScaleType="fitXY"
+            fresco:progressBarImage="@color/eee"
+            fresco:roundAsCircle="false" />
+
+        <TextView
+            android:id="@+id/type_tv"
+            style="@style/px26_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent_light5"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dm004"
+            android:paddingLeft="@dimen/dm016"
+            android:paddingRight="@dimen/dm016"
+            android:paddingTop="@dimen/dm004"
+            android:text=""
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/project_name_tv"
+            style="@style/px28_212121_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/pic_sdv"
+            android:drawableRight="@drawable/ic_next"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/date_tv"
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dm040"
+            android:layout_alignBottom="@id/pic_sdv"
+            android:layout_toRightOf="@id/pic_sdv"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/period_tv"
+            style="@style/px26_a5a5a5"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dm040"
+            android:layout_alignBottom="@id/pic_sdv"
+            android:layout_toRightOf="@id/date_tv"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/length_tv"
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dm040"
+            android:layout_above="@id/date_tv"
+            android:layout_toRightOf="@id/pic_sdv"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/invest_tv"
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dm040"
+            android:layout_above="@id/length_tv"
+            android:layout_toRightOf="@id/pic_sdv"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="" />
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_1px_divider"></include>
+
+    <TextView
+        android:id="@+id/buildsite_num_tv"
+        style="@style/px28_mainColor"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm076"
+        android:gravity="center"
+        android:text="- 工地"
+        android:visibility="gone" />
+
+    <include layout="@layout/layout_line_height_f5"></include>
+
+</LinearLayout>

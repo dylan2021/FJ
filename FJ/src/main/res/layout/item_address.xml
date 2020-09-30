@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_line_divider_top"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/dm025"
+    android:paddingRight="@dimen/main_margin_left_x"
+    android:paddingTop="@dimen/dm025">
+
+    <TextView
+        android:id="@+id/address_name_tv"
+        style="@style/px28_mainColor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/address_number_tv"
+        style="@style/px28_666"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/dm008"
+        android:drawableRight="@drawable/ic_next"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:text="" />
+
+</LinearLayout>

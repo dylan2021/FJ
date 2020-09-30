@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="aduit_dept_items">
+        <item>部门</item>
+        <item>厂长</item>
+        <item>董事长</item>
+    </string-array>
+    <string-array name="items_quality_check_result">
+        <item>合格</item>
+        <item>不合格</item>
+    </string-array>
+    <string-array name="items_safy_check_result">
+        <item>存在隐患</item>
+        <item>不存在隐患</item>
+    </string-array>
+</resources>

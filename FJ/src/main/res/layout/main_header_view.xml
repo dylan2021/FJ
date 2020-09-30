@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm160"
+        android:layout_marginTop="@dimen/line_height"
+        android:background="@drawable/shape_line_divider_bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dm015">
+
+        <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pic_sdv"
+            android:layout_width="@dimen/dm110"
+            android:layout_height="@dimen/dm110"
+            android:layout_marginLeft="@dimen/dm030"
+            android:layout_marginRight="@dimen/dm030"
+            android:scaleType="centerCrop"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:failureImage="@color/eee"
+            fresco:placeholderImage="@color/eee"
+            fresco:placeholderImageScaleType="fitXY"
+            fresco:progressBarImage="@color/eee"
+            fresco:roundAsCircle="false" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main_name_tv"
+                style="@style/px28_212121_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dm020"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/construction_unit_name"
+                style="@style/px26_212121"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dm015"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingRight="@dimen/dm020"
+                android:text="" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dm140"
+            android:layout_height="wrap_content"
+            android:onClick="onSectionListBtClick"
+            android:paddingTop="@dimen/dm015"
+            android:paddingBottom="@dimen/dm015">
+
+            <TextView
+                android:id="@+id/buildsite_number_tv"
+                style="@style/px28_mainColor_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/contract_title_tv"
+                style="@style/px26_a5a5a5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buildsite_number_tv"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="@dimen/dm005"
+                android:text="工区" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onDesignInfoClick"
+        android:paddingLeft="@dimen/main_margin_left_x"
+        android:paddingTop="@dimen/main_margin_left_x"
+        android:paddingBottom="@dimen/main_margin_left_x">
+
+        <TextView
+            android:id="@+id/main_start_date_tv"
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开工日期：" />
+
+        <TextView
+            android:id="@+id/main_period_tv"
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dm300"
+            android:gravity="center"
+            android:text="总工期：" />
+
+
+        <TextView
+            android:id="@+id/main_length_tv"
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_start_date_tv"
+            android:includeFontPadding="false"
+            android:paddingTop="@dimen/dm020"
+            android:text="总  长：" />
+
+        <TextView
+            android:id="@+id/main_invest_tv"
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_start_date_tv"
+            android:layout_marginLeft="@dimen/dm300"
+            android:ellipsize="end"
+            android:paddingTop="@dimen/dm020"
+            android:singleLine="true"
+            android:text="总投资：" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/main_margin_left_x"
+            android:src="@drawable/ic_next" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_1px_divider" />
+
+    <include layout="@layout/layout_line_height_f5" />
+
+    <include layout="@layout/layout_line_1px_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dm010"
+        android:paddingBottom="@dimen/dm005">
+
+
+        <TextView
+            android:id="@+id/ledger_tv"
+            style="@style/px24_212121"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ic_monitor_01"
+            android:drawablePadding="@dimen/dm010"
+            android:gravity="center"
+            android:paddingTop="@dimen/dm020"
+            android:paddingBottom="@dimen/dm020"
+            android:text="施工台账" />
+
+        <TextView
+            android:id="@+id/process_tv"
+            style="@style/px24_212121"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ic_main_1"
+            android:drawablePadding="@dimen/dm010"
+            android:gravity="center"
+            android:paddingTop="@dimen/dm020"
+            android:paddingBottom="@dimen/dm020"
+            android:text="进度管理" />
+
+        <TextView
+            android:id="@+id/emplyee_tv"
+            style="@style/px24_212121"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ic_monitor_02"
+            android:drawablePadding="@dimen/dm010"
+            android:gravity="center"
+            android:paddingTop="@dimen/dm020"
+            android:paddingBottom="@dimen/dm020"
+            android:text="考勤管理" />
+
+        <TextView
+            android:id="@+id/wage_tv"
+            style="@style/px24_212121"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ic_monitor_05"
+            android:drawablePadding="@dimen/dm010"
+            android:gravity="center"
+            android:paddingTop="@dimen/dm020"
+            android:paddingBottom="@dimen/dm020"
+            android:text="工资管理" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_line_divider_bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dm010">
+
+        <TextView
+            android:id="@+id/device_tv"
+            style="@style/px24_212121"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ic_work_pressed"
+            android:drawablePadding="@dimen/dm010"
+            android:gravity="center"
+            android:paddingTop="@dimen/dm010"
+            android:paddingBottom="@dimen/dm020"
+            android:text="设备管理" />
+
+        <TextView
+            android:id="@+id/local_tv"
+            style="@style/px24_212121"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ic_monitor_03"
+            android:drawablePadding="@dimen/dm010"
+            android:gravity="center"
+            android:paddingTop="@dimen/dm020"
+            android:paddingBottom="@dimen/dm020"
+            android:text="现场材料" />
+
+        <TextView
+            android:id="@+id/quality_check_tv"
+            style="@style/px24_212121"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ic_monitor_05"
+            android:drawablePadding="@dimen/dm010"
+            android:gravity="center"
+            android:paddingTop="@dimen/dm020"
+            android:paddingBottom="@dimen/dm020"
+            android:text="@string/quality_check" />
+
+        <TextView
+            android:id="@+id/quality_danger_tv"
+            style="@style/px24_212121"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ic_monitor_04"
+            android:drawablePadding="@dimen/dm010"
+            android:gravity="center"
+            android:paddingTop="@dimen/dm020"
+            android:paddingBottom="@dimen/dm020"
+            android:text="@string/quality_danger" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dm010">
+
+        <TextView
+            android:id="@+id/safety_check_tv"
+            style="@style/px24_212121"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ic_monitor_05"
+            android:drawablePadding="@dimen/dm010"
+            android:gravity="center"
+            android:paddingTop="@dimen/dm020"
+            android:paddingBottom="@dimen/dm020"
+            android:text="@string/safety_check" />
+
+        <TextView
+            android:id="@+id/safy_danger_tv"
+            style="@style/px24_212121"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ic_monitor_04"
+            android:drawablePadding="@dimen/dm010"
+            android:gravity="center"
+            android:paddingTop="@dimen/dm020"
+            android:paddingBottom="@dimen/dm020"
+            android:text="@string/safety_danger" />
+
+        <TextView
+            android:id="@+id/safety_delivery_tv"
+            style="@style/px24_212121"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ic_main_3"
+            android:drawablePadding="@dimen/dm010"
+            android:gravity="center"
+            android:paddingTop="@dimen/dm020"
+            android:paddingBottom="@dimen/dm020"
+            android:text="@string/safety_delivery_tv" />
+
+        <TextView
+            android:id="@+id/safety_tv"
+            style="@style/px24_212121"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ic_warm_pressed"
+            android:drawablePadding="@dimen/dm010"
+            android:gravity="center"
+            android:paddingTop="@dimen/dm020"
+            android:paddingBottom="@dimen/dm020"
+            android:text="@string/safy_product" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_line_height_f5" />
+
+    <include layout="@layout/layout_line_1px_divider" />
+</LinearLayout>

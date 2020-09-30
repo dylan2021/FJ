@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_title_height"
+        android:background="@drawable/shape_line_divider_bottom">
+
+        <ImageView
+            android:id="@+id/main_icon_iv"
+            android:layout_width="@dimen/dm090"
+            android:layout_height="@dimen/dm090"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/dm030"
+            android:paddingRight="@dimen/dm030"
+            android:layout_alignParentRight="true"
+            android:onClick="onMeProfileClick"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_me" />
+
+        <com.android.baihuahu.view.MarqueTextView
+            android:id="@+id/center_tv"
+            style="@style/titlesize_212121_bold"
+            android:layout_width="@dimen/item_et_max_width"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="项目管理" />
+
+        <ImageView
+            android:layout_width="@dimen/dm090"
+            android:layout_height="@dimen/dm090"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/dm030"
+            android:paddingRight="@dimen/dm030"
+            android:onClick="onProjectChooseClick"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_menu" />
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/circle_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:descendantFocusability="beforeDescendants"
+            android:divider="@color/transparent"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

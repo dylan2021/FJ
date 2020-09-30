@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_left_center"></include>
+
+    <include layout="@layout/layout_line_1px_divider"></include>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/activity_title_layout"
+        android:layout_weight="1"
+        android:background="@color/f5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/line_height"
+                android:background="@color/white"
+                android:padding="@dimen/main_margin_left_x">
+
+                <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/emplyee_icon_tv"
+                    android:layout_width="@dimen/dm180"
+                    android:layout_height="@dimen/dm180"
+                    android:layout_marginRight="@dimen/dm025"
+                    android:scaleType="centerCrop"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:failureImage="@color/eee"
+                    fresco:placeholderImage="@color/eee"
+                    fresco:placeholderImageScaleType="fitXY"
+                    fresco:progressBarImage="@color/eee"
+                    fresco:roundAsCircle="false" />
+
+                <TextView
+                    android:id="@+id/emplyee_name_mobile_tv"
+                    style="@style/px28_212121_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dm060"
+                    android:layout_toRightOf="@id/emplyee_icon_tv"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textIsSelectable="true" />
+
+                <TextView
+                    android:id="@+id/id_card_num_tv"
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dm040"
+                    android:layout_alignBottom="@id/emplyee_icon_tv"
+                    android:layout_toRightOf="@id/emplyee_icon_tv"
+                    android:text="" />
+
+
+                <TextView
+                    android:id="@+id/age_tv"
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dm040"
+                    android:layout_above="@id/id_card_num_tv"
+                    android:layout_toRightOf="@id/emplyee_icon_tv"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/group_name_tv"
+                    style="@style/px26_a5a5a5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dm040"
+                    android:layout_above="@id/age_tv"
+                    android:layout_toRightOf="@id/emplyee_icon_tv"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/process_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:layout_marginTop="@dimen/line_height"
+                android:descendantFocusability="beforeDescendants"
+                android:divider="@color/divider_color"
+                android:dividerHeight="@dimen/dm000"
+                android:listSelector="@drawable/selector_item_bg"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

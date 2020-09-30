@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/main_margin_left_x"
+    android:paddingRight="@dimen/main_margin_left_x"
+    android:paddingTop="@dimen/dm020"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/emplyee_select_tv"
+        style="@style/px26_212121"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/selector_circle_selected" />
+
+    <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/emplyee_icon_iv"
+        android:layout_toRightOf="@id/emplyee_select_tv"
+        android:layout_width="@dimen/dm067"
+        android:layout_height="@dimen/dm067"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/main_margin_left_x"
+        android:scaleType="centerInside"
+        fresco:actualImageScaleType="centerInside"
+        fresco:failureImage="@drawable/ic_def_logo_188_188"
+        fresco:placeholderImage="@drawable/ic_def_logo_188_188"
+        fresco:placeholderImageScaleType="centerInside"
+        fresco:progressBarImage="@drawable/ic_def_logo_188_188" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dm025"
+        android:layout_toRightOf="@id/emplyee_icon_iv"
+        android:background="@drawable/shape_line_divider_bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/emplyee_name_tv"
+            style="@style/px26_212121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="李国良    1590285754" />
+
+        <TextView
+            android:id="@+id/emplyee_group_tv"
+            style="@style/px24_a5a5a5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dm020"
+            android:paddingTop="@dimen/dm005"
+            android:text="工区1-工地2-班组2" />
+
+    </LinearLayout>
+</RelativeLayout>

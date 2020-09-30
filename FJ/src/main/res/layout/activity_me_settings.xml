@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_left_center" />
+
+    <include layout="@layout/layout_line_1px_divider" />
+
+    <TextView
+        android:id="@+id/me_icon_tv"
+        android:layout_width="@dimen/dm120"
+        android:layout_height="@dimen/dm120"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dm050"
+        android:background="@drawable/shape_circle_main_color"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dm030" />
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dm030"
+        android:text=""
+        android:textColor="@color/color212121"
+        android:textSize="@dimen/dm030" />
+
+    <TextView
+        android:id="@+id/dept_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_tv"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dm100"
+        android:layout_marginTop="@dimen/dm008"
+        android:text=""
+        android:textColor="@color/a5a5a5"
+        android:textSize="@dimen/dm028" />
+
+    <include layout="@layout/layout_line_height_f5" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_line_divider_bottom"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onChangePwdClick"
+        android:text="@string/change_pwd"
+        android:textColor="@color/color212121"
+        android:textSize="@dimen/dm026"
+        android:textStyle="bold" />
+
+    <include layout="@layout/layout_line_height_f5" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_line_divider_bottom"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onLogoutClick"
+        android:text="@string/user_logout"
+        android:textColor="@color/red_logout"
+        android:textSize="@dimen/dm026"
+        android:textStyle="bold" />
+
+    <include layout="@layout/layout_line_1px_divider" />
+
+</LinearLayout>
